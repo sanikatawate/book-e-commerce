@@ -2,7 +2,7 @@ import { useShoppingCart } from '@/context/ShoppingCartContext'
 import CartItemCard from './CartItemCard'
 import { formatCurrency } from '@/utilities/formatCurrency'
 import { Books } from "../data/Data"
-import emptyCartPic from "@/assets/emptyCart.jpg"
+import emptyCartPic from "../assets/emptyCart.jpg"
 import { useNavigate } from "react-router-dom"
 
 const Shoppingcart = () => {

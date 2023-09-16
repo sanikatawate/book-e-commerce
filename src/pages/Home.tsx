@@ -1,7 +1,7 @@
 import Background from "../assets/lalala.webp"
 import { testimonials } from "../data/Data"
 import { useNavigate } from "react-router-dom"
-import aboutUsPic from "@/assets/AboutUs.jpeg"
+import aboutUsPic from "../assets/AboutUs.jpeg"
 
 const Home = () => {
   let navigate = useNavigate();

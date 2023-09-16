@@ -1,5 +1,5 @@
-import background from "@/assets/ContactUsBackgroundPic.jpeg"
-import RandomPic from "@/assets/contactUsPic.png"
+import background from "../assets/ContactUsBackgroundPic.jpeg"
+import RandomPic from "../assets/contactUsPic.png"
 const ContactUs = () => {
   return (
     <div>

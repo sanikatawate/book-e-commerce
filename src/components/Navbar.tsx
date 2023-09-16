@@ -1,6 +1,6 @@
 // import { Bars3Icon, XMarkIcon, ShoppingCartIcon, BellAlertIcon } from "@heroicons/react/24/solid";
 import { useState } from "react"
-import Logo from "@/assets/Logo.png"
+import Logo from "../assets/Logo.png"
 import { Link, useNavigate } from 'react-router-dom'
 import { useShoppingCart } from "@/context/ShoppingCartContext"
 
