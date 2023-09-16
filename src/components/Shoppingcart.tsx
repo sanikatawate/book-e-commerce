@@ -2,9 +2,10 @@ import { useShoppingCart } from '@/context/ShoppingCartContext'
 import CartItemCard from './CartItemCard'
 import { formatCurrency } from '@/utilities/formatCurrency'
 import { Books } from "../data/Data"
-import emptyCartPic from "../assets/emptyCart.jpg"
+// import emptyCartPic from "../assets/emptyCart.jpg"
 import { useNavigate } from "react-router-dom"
 
+const emptyCartPic = new URL('../assets/emptyCart.jpg', import.meta.url).href
 const Shoppingcart = () => {
     const {closeCart, cartItems} = useShoppingCart()
     let navigate = useNavigate()
@@ -15,7 +16,7 @@ const Shoppingcart = () => {
                 <div className='flex flex-row justify-between shadow-sm p-4 mb-6 text-2xl'>
                 <h1 className='text text-myDarkBlue font-bold'>Cart</h1>
                 <button onClick={()=>closeCart()}>
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6 text-myDarkBlue hover:text-myBlue">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6 text-myDarkBlue hover:text-myBlue">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
                     </svg>
                 </button>

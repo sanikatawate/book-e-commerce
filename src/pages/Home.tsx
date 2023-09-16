@@ -1,7 +1,10 @@
-import Background from "../assets/lalala.webp"
+// import Background from "../assets/lalala.webp"
 import { testimonials } from "../data/Data"
 import { useNavigate } from "react-router-dom"
-import aboutUsPic from "../assets/AboutUs.jpeg"
+// import aboutUsPic from "../assets/AboutUs.jpeg"
+
+const Background = new URL('../assets/lalala.webp', import.meta.url).href
+const aboutUsPic = new URL('../assets/AboutUs.jpeg', import.meta.url).href
 
 const Home = () => {
   let navigate = useNavigate();
@@ -15,7 +18,7 @@ const Home = () => {
             <h1 className='md:text-6xl text-4xl text-black md:py-2'>Experience the enchanting world of <span className="text-myYellow">Wizardry</span> in <span className="text-myDarkBlue font-bold font-serif">HOGWARDS</span></h1>
             <p className='text-xl py-2'>Watch Harry Potter for a magical journey that explores friendship, courage, and the power of imagination.</p>
             <button onClick={()=>navigate('/store')} className='text-2xl my-4 text-white py-2 px-10 rounded-full bg-myBlue'>Get Your Collection...</button>    
-            <div className='flex flex-row justify-start items-start gap-10 py-4'>
+            <div className='flex flex-row justify-center sm:justify-start items-start gap-10 py-4'>
               <div>
                 <h1 className='md:text-4xl text-3xl'>4.47/5</h1>
                 <h5>Ratings from GoodReads</h5>
@@ -33,12 +36,12 @@ const Home = () => {
         </div>
       </section>
 
-      <section id="aboutus" className="my-16 bg-white">
-        <div className="max-w-5xl mx-auto flex flex-col sm:flex-row items-start justify-start">
-          <div><img className="h-[240px] w-[360px] max-w-6xl" src={aboutUsPic} alt="AboutUsImage" /></div>
+      <section id="aboutus" className="my-16 mb-6 bg-white">
+        <div className="max-w-5xl mx-auto flex flex-col sm:flex-row sm:items-start items-center justify-start">
+          <div><img className="h-[240px] w-[360px] max-w-6xl m-2" src={aboutUsPic} alt="AboutUsImage" /></div>
 
-          <div className="p-10 pt-0">
-            <h1 className="text-3xl text-black font-montserrat pb-4">About Us</h1>
+          <div className="text-center sm:text-left sm:px-4">
+            <h1 className="text-3xl bg-slate-50 text-black font-montserrat my-2 py-2 pb-4">About Us</h1>
             <p>
             It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.
             </p>
@@ -57,7 +60,7 @@ const Home = () => {
           <ul className="list-none mx-auto flex flex-col sm:flex-row items-center gap-8">
             {testimonials.map((item)=>{
               return(
-                <li className="w-11/12 sm:w-5/6 flex flex-col items-center md:py-6 px-2 rounded-3xl shadow-xl shadow-slate-900">
+                <li key={Math.random()} className="w-11/12 sm:w-5/6 flex flex-col items-center md:py-6 px-2 rounded-3xl shadow-xl shadow-slate-900">
                   <figure className="my-4">
                   <blockquote
                     className=" dark:bg-black bg-myBlue pl-14 pr-8 py-12 rounded-3xl relative"

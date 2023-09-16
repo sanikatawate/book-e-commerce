@@ -10,6 +10,7 @@ type Props = {
 const CartItemCard = ({id, quantity}: Props) => {
     const { removeItemFromCart } =useShoppingCart()
     const item = Books.find(item => item.id===id)
+    // const item = Books.filter(item => item.id===id)
     type item = {
         id: number;
         name: string;

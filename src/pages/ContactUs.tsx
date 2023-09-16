@@ -1,5 +1,8 @@
-import background from "../assets/ContactUsBackgroundPic.jpeg"
-import RandomPic from "../assets/contactUsPic.png"
+// import background from "../assets/ContactUsBackgroundPic.jpeg"
+// import RandomPic from "../assets/contactUsPic.png"
+
+const background = new URL('../assets/ContactUsBackgroundPic.jpeg', import.meta.url).href
+const RandomPic = new URL('../assets/contactUsPic.png', import.meta.url).href
 const ContactUs = () => {
   return (
     <div>

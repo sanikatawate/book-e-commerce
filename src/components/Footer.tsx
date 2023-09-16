@@ -21,7 +21,7 @@ const Footer = () => {
           <Link to="/orders" className="hover:opacity-90">orders</Link>
           <Link to="/contactus" className="hover:opacity-90">Contact Us</Link>
         </nav>
-        <div className="flex flex-col sm:gap-2">
+        <div className="hidden md:flex flex-col sm:gap-2">
         <h1 className='font-bold'>Contact Info</h1>
           Email:
           <a href="mailto:inquiries@harryporter.com">Inquires@harryporter.com</a>

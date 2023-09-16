@@ -36,43 +36,43 @@ export const Books = [
         "id":1,
         "name": "Harry Potter and the Philosopher’s Stone",
         "price": 10.99,
-        "imgUrl": "/src/assets/book1.jpg",
+        "imgUrl": new URL('/src/assets/book1.jpg', import.meta.url).href,
     },
     {
         "id":2,
         "name": "Harry Potter and the Chamber of Secrets",
         "price": 10.99,
-        "imgUrl": "/src/assets/book2.jpg"
+        "imgUrl": new URL('/src/assets/book2.jpg', import.meta.url).href
     },
     {
         "id":3,
         "name": "Harry Potter and the Prisoner of Azkaban",
         "price": 10.99,
-        "imgUrl": "/src/assets/book3.jpg"
+        "imgUrl": new URL('/src/assets/book3.jpg', import.meta.url).href
     },
     {
         "id":4,
         "name": "Harry Potter and the Goblet of Fire",
         "price": 10.99,
-        "imgUrl": "/src/assets/book4.jpg"
+        "imgUrl": new URL('/src/assets/book4.jpg', import.meta.url).href
     },
     {
         "id":5,
         "name": "Harry Potter and the Order of the Phoenix",
         "price": 10.99,
-        "imgUrl": "/src/assets/book5.jpg"
+        "imgUrl": new URL('/src/assets/book5.jpg', import.meta.url).href
     },
     {
         "id":6,
         "name": "Harry Potter and the Half-Blood Prince",
         "price": 10.99,
-        "imgUrl": "/src/assets/book6.jpg"
+        "imgUrl": new URL('/src/assets/book6.jpg', import.meta.url).href
     },
     {
         "id":7,
         "name": "Harry Potter and the Deathly Hallows",
         "price": 10.99,
-        "imgUrl": "/src/assets/book7.jpg"
+        "imgUrl": new URL('/src/assets/book7.jpg', import.meta.url).href
     },
 ];
 interface Books {
