@@ -14,7 +14,7 @@ const Login = () => {
     console.log(data)
   }
   return (
-    <section className='mt-32 max-w-3xl mx-auto flex flex-col justify-center p-6 items-center gap-8'>
+    <section className='mt-40 mb-28 mt- max-w-3xl mx-auto flex flex-col justify-center p-6 items-center gap-8'>
           <div className=''>
             <p className='text-5xl font-semibold text-black'>Welcome Back</p>
             <p className='text-3xl font-light my-2 text-black'>Enter you email to sign into your account</p>

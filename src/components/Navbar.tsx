@@ -1,6 +1,7 @@
 // import { Bars3Icon, XMarkIcon, ShoppingCartIcon, BellAlertIcon } from "@heroicons/react/24/solid";
 import { useState } from "react"
 import Logo from "../assets/Logo.png"
+import HarryPotter from "../assets/HarryPorter.png"
 import { Link, useNavigate } from 'react-router-dom'
 import { useShoppingCart } from "@/context/ShoppingCartContext"
 
@@ -16,6 +17,7 @@ const Navbar = () => {
           <Link to="/" className='flex items-center justify-between text-2xl font-bold font-roboto' >
             <img src={Logo} alt="MythicInk" width="75px" height="75px" />
             <h1>LOGO</h1>
+            {/* <img src={HarryPotter} alt="Harry Potter" height="2px" width="200px" /> */}
           </Link>
           <section className="hidden md:block space-x-8 text-xl" aria-label="main">
             <Link className="hover:text-myBlue" to='/'>Home</Link> 

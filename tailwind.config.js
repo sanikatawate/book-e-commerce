@@ -12,6 +12,7 @@ export default {
         "myOrange":"#E64C3C",
         "myYellow":"#EAB33F",
         "myBlue":"#49818A",
+        "myMediumBlue": "#334C5E",
         "myGrey": "#9B9B9B"
       },
       backgroundImage:(theme)=>({

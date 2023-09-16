@@ -1,10 +1,6 @@
-import React from 'react'
-
-type Props = {}
-
-const Orders = (props: Props) => {
+const Orders = () => {
   return (
-    <div>Orders</div>
+    <div className='h-full w-full mt-32 text-center text-5xl text-black'>Working in Progress</div>
   )
 }
 

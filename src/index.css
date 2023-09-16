@@ -14,3 +14,16 @@ body,
     font-family: "DM Sans", sans-serif;
     @apply text-myGrey;
 }
+
+.hide-scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: transparent transparent;
+    overflow: -moz-scrollbars-none;
+  }
+  .hide-scrollbar::-webkit-scrollbar {
+    width: 6px;
+  }
+  .hide-scrollbar::-webkit-scrollbar-thumb {
+    background-color: transparent;
+    border: 2px solid transparent;
+  }
