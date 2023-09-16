@@ -39,7 +39,7 @@ const Shoppingcart = () => {
                 </div>}
                 {cartItems.length==0 && <div className='flex flex-col items-center'>
                     <h1 className='text-center text-4xl text-black font-semibold'>Your Cart is Empty</h1>
-                    <img src={emptyCartPic} alt="" />
+                    <img src={emptyCartPic} alt="Empthycart" />
                     <button onClick={()=>{navigate('/store');closeCart()}} className='text-2xl my-4 mx-auto text-white py-2 px-10 rounded-full bg-myBlue'>Continue Shopping</button>    
                 </div>}
             </div>

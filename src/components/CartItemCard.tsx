@@ -16,7 +16,7 @@ const CartItemCard = ({id, quantity}: Props) => {
         price: number;
         imgUrl: string;
         }
-    if (item===null) return null
+    if (item===undefined) return null
   return (
     <div className='flex flex-row justify-center items-start gap-2 p-4'>
         <img className='md:h-48 md:w-27 h-32 object-cover' src={item.imgUrl} alt="" />

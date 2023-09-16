@@ -27,7 +27,7 @@ const Home = () => {
             </div>
           </div>
           <div>
-            <img src={Background} className="object-cover" alt="" width="500px" height="1000px" />
+            <img src={Background} className="object-cover" alt="BackgroundImage" width="500px" height="1000px" />
             <h1>NEW BACKGROUND PIC REMAINING</h1>
           </div>
         </div>
@@ -35,7 +35,7 @@ const Home = () => {
 
       <section id="aboutus" className="my-16 bg-white">
         <div className="max-w-5xl mx-auto flex flex-col sm:flex-row items-start justify-start">
-          <div><img className="h-[240px] w-[360px] max-w-6xl" src={aboutUsPic} alt="" /></div>
+          <div><img className="h-[240px] w-[360px] max-w-6xl" src={aboutUsPic} alt="AboutUsImage" /></div>
 
           <div className="p-10 pt-0">
             <h1 className="text-3xl text-black font-montserrat pb-4">About Us</h1>
