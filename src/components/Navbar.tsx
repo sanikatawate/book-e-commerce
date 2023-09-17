@@ -17,8 +17,8 @@ const Navbar = () => {
     <header className='bg-white text-black fixed top-0 z-30 w-full py-3 shadow-sm'>
         <nav className='max-w-5xl mx-auto flex items-center justify-between'>
           <Link to="/" className='flex items-center justify-between text-2xl font-bold font-roboto' >
-            <img src={Logo} alt="MythicInk" width="75px" height="75px" />
-            <h1 className="text-myBlue font-montserrat">Wizarding World</h1>
+            <img src={Logo} alt="MythicInk" width="50px" height="75px" />
+            <h1 className="text-myBlue font-serif font-thin text-3xl sm:text-4xl">Stupefy</h1>
             {/* <img src={HarryPotter} alt="Harry Potter" height="2px" width="200px" /> */}
           </Link>
           <section className="hidden md:block space-x-8 text-xl" aria-label="main">
@@ -43,7 +43,7 @@ const Navbar = () => {
               </svg>
               {cartQuantity>0 && <div className="rounded-full bg-myYellow flex justify-center item-center text-white w-5 h-5 absolute bottom-0 right-0 translate-x-2 text-[15px]">{cartQuantity}</div>}
             </button>
-            <button onClick={()=>setIsMenuToggled(!isMenuToggled)} className="text-3xl sm:hidden cursor-pointer relative w-8 h-8">
+            <button onClick={()=>setIsMenuToggled(!isMenuToggled)} className="text-3xl md:hidden cursor-pointer relative w-8 h-8">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
               </svg>
@@ -51,7 +51,7 @@ const Navbar = () => {
           </div>
 
           {isMenuToggled && (
-              <div className='fixed right-0 bottom-0 h-full w-64 z-40 sm:hidden bg-white drop-shadow-xl'>
+              <div className='fixed right-0 bottom-0 h-full w-64 z-40 md:hidden bg-white drop-shadow-xl'>
                 <div className='flex flex-col justify-end p-12'>
                   <div className='flex flex-row justify-between pb-10 text-2xl'>
                     <h1>Menu</h1>
@@ -68,6 +68,7 @@ const Navbar = () => {
                   <Link to='/store'>Store</Link> 
                   <Link to='/orders'>Orders</Link> 
                   <Link to='/contactus'>Contact Us</Link>
+                  <Link className="bg-teal-50 py-2 px-10 rounded-lg border border-myGrey sm:hidden" to='/login'>Login</Link>
                   </div>
                 </div>
               </div>

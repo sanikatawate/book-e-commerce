@@ -6,12 +6,12 @@ const RandomPic = new URL('../assets/contactUsPic.png', import.meta.url).href
 const ContactUs = () => {
   return (
     <div>
-      <div className="mt-[90px]">
-        <img className="bg-black" src={background} alt="" />
+      <div className="sm:mt-20 mt-[90px] bg-myDarkBlue">
+        <img className="bg-black mx-auto" src={background} alt="" />
       </div>
       <section
         id="contactus"
-        className="max-w-5xl my-10 mb-36 mx-auto"
+        className="max-w-5xl sm:mt-6 mb-20 mx-auto"
       >
         <div className="flex flex-col-reverse justify-center sm:flex-row items-center gap-8 mb-0">
           <div className="flex flex-col justify-center items-center w-full">
@@ -23,27 +23,23 @@ const ContactUs = () => {
           <form
             className="text-2xl w-2/3 flex flex-col items-left gap-4"
           >
-            <label htmlFor="subject">Subject: </label>
+            <label className="px-2 text-xl sm:text-2xl text-black" htmlFor="subject">Subject: </label>
             <input
               type="text"
               id="subject"
               name="subject"
               placeholder="Your Subject"
-              className="w-full text-black text-2xl p-3 rounded-xl border border-solid border-slate-900 dark:border-none"
+              className="w-full text-black text-xl sm:text-2xl p-3 rounded-xl border border-solid border-myGrey"
             />
-            <label htmlFor="message">Message: </label>
+            <label className="px-2 text-xl sm:text-2xl text-black" htmlFor="message">Message: </label>
             <textarea
               id="message"
               name="message"
               placeholder="Your Message:"
               required
-              className="w-full text-black text-2xl p-3 rounded-xl border border-solid border-slate-900 dark:border-none"
+              className="w-full text-black text-xl sm:text-2xl p-3 rounded-xl border border-solid border-myGrey"
             ></textarea>
-            <button
-              className="bg-myBlue hoverbg-teal-600 active:bg-myDarkBlue text-white p-3 w-48 rounded-xl border border-solid border-slate-900 dark:border-none"
-            >
-              Submit
-            </button>
+            <button className='text-2xl my-4 text-white py-2 px-10 rounded-lg bg-myBlue'>Submit</button>    
           </form>
           </div>
           <div>
