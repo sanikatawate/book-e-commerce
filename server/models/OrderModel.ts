@@ -17,18 +17,18 @@ const orderSchema = new mongoose.Schema({
         }
     ],
 
-    // itemsPrice: { type: Number, required: true },
-    // shippingPrice: { type: Number, required: true },
-    // taxPrice: { type: Number, required: true },
-    // totalPrice: { type: Number, required: true },
+    itemsPrice: { type: Number, required: true },
+    shippingPrice: { type: Number, required: true },
+    taxPrice: { type: Number, required: true },
+    totalPrice: { type: Number, required: true },
 
-    // isPaid : {type:Boolean, required:false},
-    // PaidAt : {type:Date},
-    // paymentMethod : {type:String, required:true},
-    // paymentResult: {type:Boolean},
+    isPaid : {type:Boolean, required:false},
+    PaidAt : {type:Date},
+    paymentMethod : {type:String, required:true, default:"Gpay"},
+    paymentResult: {type:Boolean},
 
-    // isDelivered:{type:Boolean, default:false},
-    // deliveredAt: {type:Date},
+    isDelivered:{type:Boolean, default:false},
+    deliveredAt: {type:Date},
     
     user : {type: mongoose.Schema.ObjectId, ref:"User", required:true}, 
 },

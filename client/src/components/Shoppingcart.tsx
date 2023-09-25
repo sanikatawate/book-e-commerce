@@ -1,13 +1,16 @@
 import { useShoppingCart } from '@/context/ShoppingCartContext'
 import CartItemCard from './CartItemCard'
 import { formatCurrency } from '@/utilities/formatCurrency'
-import { Books } from "../data/Data"
+// import { Books } from "../data/Data"
 // import emptyCartPic from "../assets/emptyCart.jpg"
 import { useNavigate } from "react-router-dom"
+import { useBooksData } from '@/context/BookContext'
 
 const emptyCartPic = new URL('../assets/emptyCart.jpg', import.meta.url).href
+
 const Shoppingcart = () => {
     const {closeCart, cartItems} = useShoppingCart()
+    const {books} = useBooksData()
     let navigate = useNavigate()
   return (
     <div>
@@ -29,7 +32,7 @@ const Shoppingcart = () => {
                         <div className='md:ms-auto text-center font-bold 5xl mb-4'>
                             Total: {formatCurrency(
                             cartItems.reduce((total, cartItem)=>{
-                                const item = Books.find(i => i.id===cartItem.id)
+                                const item:any = books.find((i:any) => i._id===cartItem.id)
                                 return total+(item?.price || 0)*cartItem.quantity}, 0)
                             )}
                         </div>

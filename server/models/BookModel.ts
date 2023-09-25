@@ -22,7 +22,7 @@ const bookSchema = new mongoose.Schema({
         type:Number,
         required:true
     },
-    Stock:{
+    stock:{
         type:Number,
         default:1
     },
@@ -34,6 +34,11 @@ const bookSchema = new mongoose.Schema({
         type:String,
         required:true
     },
+    user:{
+        type :mongoose.Schema.ObjectId,
+        ref: "User",
+        required: true
+      },
 },
     { timestamps:true, }
 )

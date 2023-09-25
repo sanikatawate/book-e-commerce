@@ -2,11 +2,16 @@
 import express from "express"
 import { Request, Response } from 'express';
 import Order from "../models/OrderModel"
+import { authUser } from "../middleware/auth/authUser";
+import { newOrder, orderHistory } from "../controllers/orderController";
 
 const router = express.Router()
 
-router.post('/',async (req, res) => {
-    try {
+router.route("/").post(authUser, newOrder)
+router.route("/history").get(authUser, orderHistory)
+export default router
+// router.post('/',async (req, res) => {
+//     try {
         // const newOrder = {
         //     shippingInfo : {
         //         fullName: req.body.fullname,
@@ -25,12 +30,12 @@ router.post('/',async (req, res) => {
         //     ],           
         //     user : {type: mongoose.Schema.ObjectId, ref:"User", required:true},
         // }
-        const order = await Order.create(req.body)
-        return res.status(200).json({order})
-    } catch (error:any) {
-        console.log(error.message)
-        res.sendStatus(500).send({message:error.message})
-    }
-})
+//         const order = await Order.create(req.body)
+//         return res.status(200).json({order})
+//     } catch (error:any) {
+//         console.log(error.message)
+//         res.sendStatus(500).send({message:error.message})
+//     }
+// })
 
-export default router
+

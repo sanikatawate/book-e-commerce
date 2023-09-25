@@ -1,4 +1,4 @@
-import { useContext, createContext, ReactNode, useState, useEffect } from 'react'
+import { useContext, createContext, ReactNode, useState} from 'react'
 import Shoppingcart from '@/components/Shoppingcart'
 // import axios from "axios";
 
@@ -22,9 +22,7 @@ type CartItem = {
     quantity: number
 }
 
-
 const ShoppingCartContext = createContext({} as ShoppingCartContext)
-
 
 export function useShoppingCart(){
     return useContext(ShoppingCartContext)

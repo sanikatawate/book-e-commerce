@@ -1,11 +1,16 @@
 // import background from "../assets/ContactUsBackgroundPic.jpeg"
 // import RandomPic from "../assets/contactUsPic.png"
 
+import { Helmet } from "react-helmet-async"
+
 const background = new URL('../assets/ContactUsBackgroundPic.jpeg', import.meta.url).href
 const RandomPic = new URL('../assets/contactUsPic.png', import.meta.url).href
 const ContactUs = () => {
   return (
     <div>
+      <Helmet>
+        <title>Contact Us</title>
+      </Helmet>
       <div className="sm:mt-20 mt-[90px] bg-myDarkBlue">
         <img className="bg-black mx-auto" src={background} alt="" />
       </div>

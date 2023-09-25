@@ -25,7 +25,7 @@ const bookSchema = new mongoose_1.default.Schema({
         type: Number,
         required: true
     },
-    Stock: {
+    stock: {
         type: Number,
         default: 1
     },
@@ -35,6 +35,11 @@ const bookSchema = new mongoose_1.default.Schema({
     },
     imageUrl: {
         type: String,
+        required: true
+    },
+    user: {
+        type: mongoose_1.default.Schema.ObjectId,
+        ref: "User",
         required: true
     },
 }, { timestamps: true, });

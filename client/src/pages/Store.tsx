@@ -1,30 +1,12 @@
-// import { Books } from "../data/Data"
 import BookItem from "@/components/BookItem"
-import {useEffect, useState} from "react"
+import { useBooksData } from "@/context/BookContext"
+import { Helmet } from "react-helmet-async"
+
 const Store = () => {
-  const [books , setBooks] = useState([])
-  useEffect(() => {
-    window.scrollTo({
-      top: 0,
-      left: 0,
-      behavior: "smooth"
-    })
-  },[])
-
-  useEffect(()=>{
-    fetch("http://localhost:5000/books")
-    .then((response: any) => response.json())
-    .then((data: any) => {console.log(data.books);setBooks(data.books)})
-  }, []);
-
-  // useEffect(() => {
-  //   console.log(books)
-  // }, [books])
-  
+  const {books} = useBooksData()
   return (
-
     <div className="sm:mt-28 mt-24 max-w-5xl mx-auto flex flex-col justify-center">
-
+      <Helmet><title>Store</title></Helmet>
       <div className="border border-myGrey rounded-lg sm:border-none my-6 mx-auto sm:ml-12 flex flex-row justify-start items-start shadow-lg sm:shadow-none">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6 m-2 sm:hidden">
           <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
@@ -36,12 +18,11 @@ const Store = () => {
           </svg>
         </button>
       </div>
-
-    <div className="mb-12 mt-4 flex flex-row items-center justify-center gap-16 flex-wrap ">
-      {books.map((book:Object, key)=>{
-        return(<BookItem book={book} key={key} />)
-      })}
-    </div>
+      <div className="mb-12 mt-4 flex flex-row items-center justify-center gap-16 flex-wrap ">
+        {books.map((book:any, key)=>{
+          return(<BookItem {...book} key={key} />)
+        })}
+      </div>
     </div>
   )
 }

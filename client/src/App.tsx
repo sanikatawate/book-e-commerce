@@ -8,11 +8,12 @@ import SignUp from './pages/SignUp'
 import Login from './pages/Login'
 import Footer from './components/Footer'
 import { ShoppingCartProvider } from './context/ShoppingCartContext'
-import ProductDetails from './pages/ProductDetails'
+import {BookContextProvider} from './context/BookContext'
 
 function App() {
   return (
     <div className='app'>
+      <BookContextProvider>
       <ShoppingCartProvider>
         <Navbar />
           <Routes>
@@ -22,10 +23,10 @@ function App() {
             <Route  path='/contactus' element={<ContactUs />} />
             <Route  path='/signup' element={<SignUp/>} />
             <Route  path='/login' element={<Login/>} />
-            <Route path='/product/:name' element={<ProductDetails />} />
           </Routes>
         <Footer />
       </ShoppingCartProvider>
+      </BookContextProvider>
     </div>
   )
 }

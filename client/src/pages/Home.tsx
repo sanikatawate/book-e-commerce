@@ -1,7 +1,9 @@
 // import Background from "../assets/lalala.webp"
 // import { useState } from "react"
+import Rating from "@/components/Rating"
 import { testimonials } from "../data/Data"
 import { useNavigate } from "react-router-dom"
+import { Helmet } from "react-helmet-async"
 // import aboutUsPic from "../assets/AboutUs.jpeg"
 
 const Background = new URL('../assets/lalala.webp', import.meta.url).href
@@ -74,7 +76,7 @@ const Home = () => {
           <div className="mx-auto"><img className="h-[240px] w-[360px] max-w-6xl m-2" src={aboutUsPic} alt="AboutUsImage" /></div>
 
           <div className="text-center sm:text-left sm:px-4">
-            <h1 className="text-3xl bg-slate-50 text-black font-montserrat my-3 py-2 pb-4">About Us</h1>
+            <h1 className="text-3xl text-black font-montserrat my-3 py-2 pb-4"><u>About Us</u></h1>
             <p className="py-2">
             It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.
             </p>

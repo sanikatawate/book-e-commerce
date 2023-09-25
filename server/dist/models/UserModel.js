@@ -27,6 +27,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const mongoose_1 = __importStar(require("mongoose"));
+const validator_1 = __importDefault(require("validator"));
 const bcrypt_1 = __importDefault(require("bcrypt"));
 const jsonwebtoken_1 = __importDefault(require("jsonwebtoken"));
 require("dotenv/config");
@@ -34,16 +35,21 @@ const cartSchema = new mongoose_1.Schema({ id: { type: Number, required: true },
 const userSchema = new mongoose_1.Schema({
     username: {
         type: String,
-        required: true
+        required: true,
+        minLength: [3, "Username should have atleast 3 characters"],
+        maxLength: [30, "Username should not exceed 30 characters"],
     },
     email: {
         type: String,
         required: true,
         unique: true,
+        validate: [validator_1.default.isEmail, "Please Enter Valid Email"],
     },
     password: {
         type: String,
         required: true,
+        minLength: [6, "Password should have atleast 6 characters"],
+        maxLength: [30, "Password should not exceed 30 characters"],
     },
 }, { timestamps: true });
 // Hash Password before saving in db

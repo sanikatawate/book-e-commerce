@@ -1,4 +1,5 @@
 import mongoose, { Schema } from "mongoose";
+import validator from "validator";
 import bcrypt from "bcrypt"
 import jwt from "jsonwebtoken"
 import "dotenv/config"
@@ -7,16 +8,21 @@ const cartSchema = new Schema({id:{type:Number, required:true}, quantity:{type:N
 const userSchema = new Schema({
     username: {
         type:String,
-        required:true
+        required:true,
+        minLength: [3, "Username should have atleast 3 characters"],
+        maxLength: [30, "Username should not exceed 30 characters"],
     },
     email: {
         type:String,
         required:true,
         unique: true,
+        validate: [validator.isEmail, "Please Enter Valid Email"],
     },
     password: {
         type:String,
         required:true,
+        minLength: [6, "Password should have atleast 6 characters"],
+        maxLength: [30, "Password should not exceed 30 characters"],
     },   
   },
     { timestamps:true}
